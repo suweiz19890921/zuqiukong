@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9527.1" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9525.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ZHThemeCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zYg-dc-XCb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOe-KK-xCR">
+                        <rect key="frame" x="19" y="20" width="35" height="35"/>
+                        <state key="normal" backgroundImage="setting_teams_selected_default"/>
+                        <state key="selected" backgroundImage="setting_teams_selected_selected"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="默认" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26r-rg-g9h">
+                        <rect key="frame" x="81" y="27" width="187" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="team_logo_default" translatesAutoresizingMaskIntoConstraints="NO" id="qU0-vp-rlo">
+                        <rect key="frame" x="310" y="15" width="43" height="44"/>
+                    </imageView>
+                </subviews>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="leftBtn" destination="oOe-KK-xCR" id="J5W-Ak-TSl"/>
+                <outlet property="teamBGView" destination="zYg-dc-XCb" id="4yH-S9-grM"/>
+                <outlet property="teamName" destination="26r-rg-g9h" id="tcl-76-h9q"/>
+                <outlet property="teamView" destination="qU0-vp-rlo" id="Y89-wB-MSM"/>
+            </connections>
+            <point key="canvasLocation" x="183.5" y="186.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="setting_teams_selected_default" width="22" height="22"/>
+        <image name="setting_teams_selected_selected" width="22" height="22"/>
+        <image name="team_logo_default" width="75" height="75"/>
+    </resources>
+</document>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[ZHStatusCell setStatusFrame:]:ZHStatusCell.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ZHStatusCell setStatus:]:ZHStatusCell.m">
+      </ContextState>
+      <ContextState
+         contextName = "__26-[ZHAddFavController back]_block_invoke:ZHAddFavController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[ZHMyFavs myFavs]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ZHStatusToolBar setStatus:]:ZHStatusToolBar.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.commentNumL">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

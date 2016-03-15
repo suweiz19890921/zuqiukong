@@ -1,0 +1,26 @@
+//
+//  NSString+Extension.h
+//  01-QQ聊天布局
+//
+//  Created by apple on 14-4-2.
+//  Copyright (c) 2014年 itcast. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+@interface NSString (Extension)
+/**
+ *  返回字符串所占用的尺寸
+ *
+ *  @param font    字体
+ *  @param maxSize 最大尺寸
+ */
+- (CGSize)sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize;
+
+/**
+ *  这是一个时间转化的方法,时间格式是 @"Wed Jan 13 15:06:03 +0800 2016"
+ */
++ (NSString *)changeTime:(NSString *)created_at;
+//计算文件大小
+- (long long)fileSize;
+@end

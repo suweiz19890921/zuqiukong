@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9527.1" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9525.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZHSettingTopView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="player_top_bg" translatesAutoresizingMaskIntoConstraints="NO" id="LX8-cc-ZkP">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGh-dd-zar">
+                    <rect key="frame" x="50" y="194" width="120" height="38"/>
+                    <state key="normal" image="user_but_shop_default">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="user_but_shop_pressed"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuR-b1-7Jn">
+                    <rect key="frame" x="321" y="18" width="44" height="44"/>
+                    <state key="normal" image="topbar_left_ic_setting_default"/>
+                    <state key="highlighted" image="topbar_left_ic_setting_pressed"/>
+                    <connections>
+                        <action selector="settingClick" destination="iN0-l3-epB" eventType="touchUpInside" id="nLv-BG-myL"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSv-lS-JVP">
+                    <rect key="frame" x="151" y="156" width="73" height="30"/>
+                    <state key="normal" title="登陆/注册">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2A-sV-0XQ">
+                    <rect key="frame" x="205" y="194" width="120" height="38"/>
+                    <state key="normal" image="user_but_message_default">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="user_but_message_pressed"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLM-e2-83k">
+                    <rect key="frame" x="137" y="48" width="100" height="100"/>
+                    <state key="normal" backgroundImage="public_user_avatar_circle">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="iconBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="iIt-p2-W4B"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="iconBtn" destination="FLM-e2-83k" id="uBw-jb-GMz"/>
+                <outlet property="topBGView" destination="LX8-cc-ZkP" id="U2x-Ch-xbh"/>
+            </connections>
+            <point key="canvasLocation" x="130.5" y="190"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="player_top_bg" width="320" height="240"/>
+        <image name="public_user_avatar_circle" width="128" height="129"/>
+        <image name="topbar_left_ic_setting_default" width="44" height="44"/>
+        <image name="topbar_left_ic_setting_pressed" width="44" height="44"/>
+        <image name="user_but_message_default" width="136" height="40"/>
+        <image name="user_but_message_pressed" width="136" height="40"/>
+        <image name="user_but_shop_default" width="136" height="40"/>
+        <image name="user_but_shop_pressed" width="136" height="40"/>
+    </resources>
+</document>
