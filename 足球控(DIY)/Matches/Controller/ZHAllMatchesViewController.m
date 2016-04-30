@@ -114,6 +114,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    /**
+     *  cell点击之后，将 点击的cell的序列号 和对应的模型通过block的方式传给父控制器
+     */
     self.CellClickHandler(self.dataSourceArray[indexPath.row],indexPath);
 }
 //设置header的高度

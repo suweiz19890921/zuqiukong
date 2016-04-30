@@ -10,6 +10,7 @@
 #import "ZHMatchesPageViewController.h"
 #import "ZHAllLeagueController.h"
 #import "ZHSkinTool.h"
+#import <CoreGraphics/CoreGraphics.h>
 @interface ZHMatchesViewController ()
 
 @property(nonatomic,weak)UITableView *tableView;
@@ -33,9 +34,13 @@
     [self setupNavBar];
 }
 
+
 - (void)setupNavBar
 {
     //创建titleView
+    /**
+     创建比赛页面的UISegmentedControl
+     */
     UISegmentedControl *segC = [[UISegmentedControl alloc]init];
     segC.size = CGSizeMake(150, 30);
     [segC addTarget:self action:@selector(changeSegmentPage:) forControlEvents:UIControlEventValueChanged];

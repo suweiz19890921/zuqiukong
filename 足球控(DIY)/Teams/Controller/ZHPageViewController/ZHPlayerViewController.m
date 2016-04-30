@@ -89,6 +89,9 @@
 {
     ZHPlayerCell *cell = [ZHPlayerCell cellWithTableView:tableView];
     cell.person = self.dataArray[indexPath.row];
+    /**
+     *  这个动画和换肤那个页面是一个动画，也是利用autolayout，无论你怎么设置，都会给你改回去，这样就有一个动画了
+     */
     [UIView animateWithDuration:0.5 animations:^{
         cell.iconView.size  = CGSizeMake(10, 10);
         

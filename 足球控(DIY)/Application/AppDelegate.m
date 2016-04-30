@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "ZHTabBarController.h"
 #import "UMSocial.h"
+#import "MKScanViewController.h"
+#import "ZHTeamThemeViewController.h"
+#import "ZHNGViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -18,13 +21,39 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [UMSocialData setAppKey:@"569b815b67e58eca400007d1"];
-    
+    [self setTouch];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     ZHTabBarController   *vc = [[ZHTabBarController alloc]init];
     self.window.rootViewController = vc;
     return YES;
+}
+
+-(void)setTouch
+{
+    UIApplicationShortcutItem *firstItem = [[UIApplicationShortcutItem alloc] initWithType:@"First" localizedTitle:@"我的主题" localizedSubtitle:nil icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeHome] userInfo:nil];
+    
+    
+    UIApplicationShortcutItem *threeItem = [[UIApplicationShortcutItem alloc] initWithType:@"Third" localizedTitle:@"扫一扫" localizedSubtitle:nil icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeShuffle] userInfo:nil];
+    
+    
+    [[UIApplication sharedApplication] setShortcutItems:@[firstItem,threeItem]];
+}
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
+    
+    NSString *type = [shortcutItem type];
+    ZHNGViewController *naviVC = [(ZHTabBarController *)self.window.rootViewController selectedViewController];
+  
+    
+    if ([type isEqualToString:@"Third"]) {
+        
+        [naviVC pushViewController:[[MKScanViewController alloc] init] animated:YES];
+        
+    }else {
+        [naviVC pushViewController:[[ZHTeamThemeViewController alloc] init] animated:YES];
+    }
+    
 }
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

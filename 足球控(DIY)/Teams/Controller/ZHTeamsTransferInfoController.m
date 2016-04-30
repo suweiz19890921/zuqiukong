@@ -13,6 +13,10 @@
 #import "ZHPerson.h"
 #import "ZHFavourite.h"
 #import "UIBarButtonItem+Extension.h"
+
+/**
+ *  球员转会控制器
+ */
 @interface ZHTeamsTransferInfoController ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,weak)UITableView *tableView;
 

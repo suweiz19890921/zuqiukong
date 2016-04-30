@@ -22,6 +22,21 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+}
+
+
+//移动到母控制器上时再进行子控件的安装
+- (void)willMoveToParentViewController:(UIViewController *)parent
+{
+    /**
+     *  这个方法是自己被添加到父控件的时候会调用的方法，此时frame已经确定
+     */
+ 
+    [self setupTopPageSlider];
+    [self setupScrollView];
+    [self addChildViewControllers];
+    
 }
 #pragma mark setupPageView
 //创建scrollView
@@ -57,6 +72,9 @@
 //创建顶部的pageSlider
 - (void)setupTopPageSlider
 {
+    /**
+     *  这是球队页面中 一个透明的 scrollview
+     */
     ZHPageSlider *pageControl = [ZHPageSlider pageSlider];
     pageControl.pageDelegate = self;
     _pageSlider = pageControl;
@@ -66,6 +84,7 @@
 }
 
 #pragma mark ZHPageSlider的代理
+//Slider的代理方法，Slider按钮点击的时候，scrollview的contentOffset跟着改变
 - (void)ZHPageSliderTitleButtonDidClicked:(ZHPageSlider *)pageSlider atIndex:(NSUInteger)index WithButton:(UIButton *)button
 {
     [UIView animateWithDuration:0.5 animations:^{
@@ -83,14 +102,6 @@
     }
 }
 
-//移动到母控制器上时再进行子控件的安装
-- (void)willMoveToParentViewController:(UIViewController *)parent
-{
-    [self setupTopPageSlider];
-    [self setupScrollView];
-    [self addChildViewControllers];
-    
-}
 -(void)didReceiveMemoryWarning
 {
      NSLog(@"%s",__func__);

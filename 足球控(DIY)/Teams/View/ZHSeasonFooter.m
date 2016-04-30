@@ -89,6 +89,7 @@ typedef enum
     [self addValues:(CGFloat)footerData.w_game_count forResult:ZHLeagueResultWin];
     [self addValues:(CGFloat)footerData.l_game_count forResult:ZHLeagueResultLost];
     [self addValues:(CGFloat)footerData.d_game_count forResult:ZHLeagueResultDraw];
+    
     self.totalGL.text = [NSString stringWithFormat:@"%ld", footerData.w_game_count + footerData.l_game_count + footerData.d_game_count];
 }
 @end

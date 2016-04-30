@@ -22,6 +22,9 @@
 @property (nonatomic,assign,getter=isShowLeftView)BOOL showLeftView;
 @property (nonatomic,weak) UIView *hudView;
 @end
+/**
+ *  team最底层的控制器
+ */
 
 @implementation ZHTeamsViewController
 {
@@ -83,6 +86,9 @@
 }
 - (void)setupPageViewSlider
 {
+    /**
+     *  这个方法并没有被调用
+     */
     //顶部滑动条
     ZHPageSlider *pageSlider = [ZHPageSlider pageSlider];
     _pageSlider = pageSlider;
@@ -113,6 +119,9 @@
 //创建pageViewController
 - (void)setupPageViewController
 {
+    /**
+    层级结构说明
+     */
     ZHPageViewRootController *rootViewController = [[ZHPageViewRootController alloc]init];
     _pageViewVC = rootViewController;
     rootViewController.view.y = CGRectGetMaxY(_topView.frame) - 40;
@@ -253,6 +262,6 @@
 #pragma mark umeng 分享代理
 -(void)didFinishGetUMSocialDataResponse:(UMSocialResponseEntity *)response
 {
-    NSLog(@"%@",response);
+    //NSLog(@"%@",response);
 }
 @end

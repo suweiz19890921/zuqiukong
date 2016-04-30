@@ -186,7 +186,7 @@
         for (int i = 0; i < country.leagues.count; i++) {
             [indexPathArray addObject:[NSIndexPath indexPathForItem:indexPath.row+ 1 + i inSection:indexPath.section]];
         }
-        //2.添加动画
+        //2.添加动画 在点击的对应的tableviewcell下插入
         [self.tableView insertRowsAtIndexPaths:indexPathArray withRowAnimation:UITableViewRowAnimationAutomatic];
     } failure:^(NSError *error) {
         NSLog(@"%@",error);

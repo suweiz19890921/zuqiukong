@@ -38,6 +38,9 @@
 }
 -(void)awakeFromNib
 {
+    /**
+     *  图标切圆角的方法，这种方法会导致卡顿，因为会强制进行离屏渲染，最好用2D绘图画上去或者用贝塞尔曲线画
+     */
     self.iconView.layer.cornerRadius = self.iconView.frame.size.width / 2;
     self.iconView.layer.masksToBounds = YES;
 }

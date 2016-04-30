@@ -74,6 +74,9 @@
             [_titleBtnArray addObject:titleBtn];
         }
         //添加滚动的lable
+    /**
+     是一个箭头图片
+     */
     UIImageView *rollLable = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"tab_ic_change"]];
         _rollLable = rollLable;
         rollLable.width = 20;

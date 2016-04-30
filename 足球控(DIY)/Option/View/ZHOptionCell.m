@@ -47,6 +47,7 @@
         [self.btn2 sd_setImageWithURL:[NSURL URLWithString:responseObject[@"data"][@"game"][1][@"img"]] forState:UIControlStateNormal];
         _titleRight = responseObject[@"data"][@"game"][1][@"title"];
         _urlRight = responseObject[@"data"][@"game"][1][@"sharelink"];
+       // NSLog(@"%@",responseObject);
         
     } failure:^(NSError *error) {
         NSLog(@"%@",error);

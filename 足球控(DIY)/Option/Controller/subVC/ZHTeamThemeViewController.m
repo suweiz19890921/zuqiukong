@@ -26,9 +26,18 @@
     [super viewDidLoad];
     [self setupTableView];
     [self setupNVbar];
+   
     self.navigationItem.title = @"球队主题";
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    BOOL flag = [self.navigationController.navigationBar isHidden];
+    if (flag) {
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+    }
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -49,7 +58,7 @@
 }
 - (void)setupNVbar
 {
-    self.navigationItem.title = @"所有联赛";
+    self.navigationItem.title = @"所有联赛";//这句话没有意义，因为在它后面又设置了一次item，覆盖了这个
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithNormalImageName:@"topbar_left_ic_back_default" highlitedImageName:@"topbar_left_ic_back_pressed" imageEdgeInsets:UIEdgeInsetsMake(0, -20, 0, 20) andTarget:self action:@selector(backClick)];
 }
 -(void)backClick
@@ -79,7 +88,10 @@
     ZHThemeCell *cell = [ZHThemeCell cellWithTableView:tableView];
     cell.model = self.dataArray[indexPath.row];
     [UIView animateWithDuration:0.5 animations:^{
-        cell.teamBGView.size  = CGSizeMake(10, 10);
+        /**
+         *  这个动画原理也是设计到setFrame这个方法，这里给teamBGView设置frame，因为cell用了outlayout，即时你改了frame，到最后outlayout还是会给你改回去
+         */
+        cell.teamBGView.size  = CGSizeMake(20, 10);
     }];
     return cell;
 }

@@ -139,6 +139,8 @@
 
 -(void)reset
 {
+   
+   // UIWebView*j;
     self.imageView.image = nil;
     self.title.text = @"";
     self.desc.text = @"";
