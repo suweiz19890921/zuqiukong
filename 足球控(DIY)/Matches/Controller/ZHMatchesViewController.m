@@ -22,6 +22,7 @@
 
 @implementation ZHMatchesViewController
 {
+    ///我就想做个试验，看怎么新建远程仓库
     UISegmentedControl *_segC;
 }
 - (void)viewWillAppear:(BOOL)animated
