@@ -38,6 +38,7 @@
 }
 - (void)setupNVbar
 {
+    //测速远程分支创建，以及推送套远程仓库，然后推送代码
     self.navigationItem.title = @"所有联赛";
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithNormalImageName:@"topbar_left_ic_back_default" highlitedImageName:@"topbar_left_ic_back_pressed" imageEdgeInsets:UIEdgeInsetsMake(0, -20, 0, 20) andTarget:self action:@selector(backClick)];
 }
